@@ -1,0 +1,37 @@
+<html>
+	<head>
+  		<title><%= keyword %></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+  	</head>
+  	<body>
+	    <h1><%= keyword %></h1>
+	    <table>
+			<thead>
+				<tr>
+					<th>제목</th>
+					<th>적은 사람</th>
+					<th>설명</th>
+					<th>올린 날짜</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% for(var i=0; i<values.length; i++){ %>
+				<tr>
+					<td>
+		                <%= values[i].title %>
+	            	</td>
+	            	<td>
+		                <%= values[i].bloggername %>
+	            	</td>
+	            	<td>
+		                <%= values[i].description %>
+	            	</td>
+					<td>
+		                <%= values[i].postdate %>
+	            	</td>
+	            </tr>
+	        	<% } %>
+		    </tbody>
+		</table>
+  	</body>
+</html>
